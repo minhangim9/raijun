@@ -1,0 +1,145 @@
+.hub-game-home {
+  position: fixed;
+  z-index: 96;
+  top: max(7px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: 66px;
+  height: 66px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff2c6;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px #091421, 0 0 3px #081424;
+  font: 800 12px/1.12 system-ui, sans-serif;
+  cursor: pointer;
+}
+.hub-game-home img, .hub-game-dialog button img {
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 2px #071625b0);
+}
+.hub-game-home:hover img, .hub-game-dialog button:hover img { filter: drop-shadow(0 0 7px #eed194); }
+.hub-game-home:active img, .hub-game-dialog button:active img { transform: scale(.91); }
+.hub-game-dialog {
+  color: #fff2c6;
+  background: #192e48;
+  padding: clamp(1rem, 4vw, 1.65rem);
+  max-width: min(90vw, 480px);
+  border: 2px solid #cd9650;
+  border-radius: 16px;
+  box-shadow: 0 0 0 4px #59402d;
+  font: 1rem/1.35 system-ui, sans-serif;
+  text-align: center;
+}
+.hub-game-dialog::backdrop { background: #0b1729d6; }
+.hub-game-dialog h2 { font-size: clamp(1.12rem, 4vw, 1.6rem); margin: 0 0 1rem; }
+.hub-game-dialog form { display: flex; gap: 1.15rem; flex-wrap: wrap; justify-content: center; }
+.hub-game-dialog button {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: clamp(70px, 16vw, 110px);
+  height: clamp(78px, 17vw, 120px);
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: 780 .93rem system-ui, sans-serif;
+  text-shadow: 0 2px 2px #0a1421;
+  cursor: pointer;
+}
+.hub-game-dialog button[hidden] { display: none; }
+.hub-game-home:focus-visible, .hub-game-dialog button:focus-visible,
+.number-location:focus-visible, .number-language:focus-visible { outline: 3px solid #ffe2a0; outline-offset: 4px; border-radius: 12px; }
+
+.numbers-game #menu {
+  position: absolute;
+  inset: 0;
+  display: block;
+  padding: 0;
+  background: linear-gradient(#101e39ab, #0e223140 48%, #101e39a6), url("/lobby-art/map-numbers.webp") center / cover;
+}
+.numbers-game #menu.hidden { display: none; }
+.numbers-game #menu .mTitle { position: absolute; top: 15%; width: 100%; text-align: center; }
+.numbers-game #menu .mTitle h1 {
+  margin: 0;
+  font-size: 82px;
+  color: #fff0aa;
+  -webkit-text-stroke: 2px #70482b;
+  paint-order: stroke fill;
+  text-shadow: 0 5px #87512b, 0 10px 24px #151221;
+  letter-spacing: -.06em;
+}
+.numbers-game #menu .number-locations {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 36%;
+}
+.numbers-game #menu .number-location {
+  width: 310px;
+  height: 310px;
+  display: block;
+  position: relative;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #fff4c8;
+}
+.numbers-game #menu .number-location img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 9px 9px #152235b0);
+}
+.numbers-game #menu .number-location span {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 70%;
+  min-height: 18%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.05;
+  word-break: keep-all;
+  text-shadow: 0 3px #172238;
+}
+.numbers-game #menu .number-location:hover img { filter: drop-shadow(0 0 15px #f7bd61bc); }
+.numbers-game #menu .number-location:active { transform: scale(.94); }
+.numbers-game #menu .number-language {
+  position: absolute;
+  inset: auto 50px 44px auto;
+  display: grid;
+  grid-template-rows: 87px auto;
+  justify-items: center;
+  width: 125px;
+  height: 118px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  transform: none;
+  color: #fff3cb;
+  text-shadow: 0 3px 3px #152235;
+  box-shadow: none;
+  font-size: 23px;
+}
+.number-language img { width: 100%; height: 100%; object-fit: contain; }
+.numbers-game #rotate .phone { width: min(35vw, 96px); height: auto; object-fit: contain; }
+@media (max-width: 590px) {
+  .numbers-game .hub-game-home { top: auto; bottom: max(5px, env(safe-area-inset-bottom)); }
+  .hub-game-home { width: 52px; height: 52px; font-size: 10px; }
+}

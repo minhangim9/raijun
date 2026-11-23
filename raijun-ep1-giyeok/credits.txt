@@ -1,0 +1,40 @@
+라이준 한글 1화 (ㄱ 친구들: 가·고·기) — Credits / Crédits
+
+[실제 사진 / Real photos]  (stored locally in /photos, no hotlinking)
+1) photos/gazelle.jpg — Thomson's gazelle (Eudorcas thomsonii), Serengeti National Park, Tanzania
+   Author: Bob  |  License: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0)
+   Source: https://commons.wikimedia.org/wiki/File:Eudorcas_thomsonii_-Serengeti_National_Park,_Tanzania-8.jpg
+   Changes: resized to 1280 px width.
+2) photos/gorilla.jpg — Western lowland gorilla (Gorilla gorilla gorilla)
+   Author: k7hpn  |  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
+   Source: https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla(Gorilla_gorilla_gorilla).jpg
+   Changes: resized to 1280 px width.
+3) photos/giraffe.jpg — Masai giraffe (Giraffa tippelskirchi tippelskirchi)
+   Author: Jason Graham (iNaturalist 344231381)  |  License: CC0 1.0 Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/)
+   Source: https://commons.wikimedia.org/wiki/File:Giraffa_tippelskirchi_tippelskirchi_344231381.jpg
+   Changes: resized to 1280 px width.
+
+[도감 실제 동물 영상 / Album real-animal clips]  (trimmed, re-encoded, sound removed; stored locally)
+4) dex_gazelle.mp4 — impala herd (a gazelle-like antelope) walking/grazing, from "Horns of africa.webm"
+   Author: brando  |  License: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
+   Source: https://commons.wikimedia.org/wiki/File:Horns_of_africa.webm  |  Changes: 8 s excerpt (16–24 s), scaled, fades.
+5) dex_gorilla.mp4 — young western lowland gorilla walking upright and swinging arms (display)
+   Author: LA Zoo  |  License: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0)
+   Source: https://commons.wikimedia.org/wiki/File:Three_year_old_western_lowland_gorilla_at_Los_Angeles_Zoo.webm  |  Changes: first 6 s, scaled, fades.
+6) dex_giraffe.mp4 — giraffe stretching its long neck to eat tree leaves
+   Author: Lennart Hessel  |  License: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0)
+   Source: https://commons.wikimedia.org/wiki/File:Giraffe_eating_leaves.webm  |  Changes: first 10 s, cropped/scaled, fades.
+도감 동물 소리(발굽 소리·가슴 두드리기·잎 먹는 소리)는 코드로 합성한 효과음입니다 (Web Audio).
+(No CC0/CC BY gazelle leaping footage or animal sound recordings were found; the impala clip and synthesized sounds are used instead.)
+
+[활동지 색칠 그림 / Worksheet colouring art]
+가젤·고릴라·기린 색칠 그림은 AI 없이 코드(PIL 도형)로 직접 그린 선화입니다.
+
+[AI 사용 안내 / AI use]
+일부 영상·음성은 AI 도구로 만들었어요. (가젤·고릴라·기린 애니메이션 영상: AI 영상 생성 도구 / 밝은 아이 목소리: Google TTS(gTTS) 합성 후 음높이 가공 (한국어: MeloTTS 합성 → OpenVoice v2로 라이준 영상 목소리 음색 변환 / 기타 언어: gTTS + Praat·ffmpeg))
+Certaines vidéos et voix ont été créées avec des outils d'IA.
+한글 글자(획·점선·금색 글자)는 AI 이미지가 아니라 페이지가 직접 그린 벡터(SVG)입니다.
+배경음악·효과음은 코드로 합성했습니다.
+
+[개인정보 / Privacy]
+계정 없음 · 서버 저장 없음 · 추적기/광고/외부 요청 없음. 진행 기록과 설정은 이 기기의 브라우저(localStorage)에만 저장되며, 부모님 영역에서 지울 수 있습니다.

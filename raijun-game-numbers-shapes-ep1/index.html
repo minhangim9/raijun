@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0d2a3f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>라이준 숫자·도형 모험</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<link rel="stylesheet" href="style.css?v=2.9">
+<link rel="stylesheet" href="/game-nav.css">
+</head>
+<body class="numbers-game">
+<div id="wrap">
+  <div id="rotate" class="hidden"><img class="phone" src="/lobby-art/rotate.webp" alt=""> <b id="rotTxt">가로로 돌려주세요</b> <small id="rotSub">(이대로도 할 수 있어요)</small></div>
+  <div id="stage">
+    <div id="cam">
+      <img id="bgimg" src="img/bg_forest.webp" alt="">
+      <div id="world"></div>
+      <div id="cast"></div>
+    </div>
+    <div id="fx"></div>
+    <canvas id="trace" class="hidden"></canvas>
+    <div id="bubble" class="hidden"><div id="who"></div><div id="line"></div></div>
+    <div id="choices" class="hidden"></div>
+    <div id="hand" class="hidden">👆</div>
+<div id="map" class="hidden"></div>
+    <!-- menu -->
+    <div id="menu">
+      <div class="mTitle"><h1>어떤 놀이를 할까요?</h1></div>
+      <div class="number-locations">
+        <button class="number-location" id="goEp1"><img src="/lobby-art/place-forest.webp" alt=""><span>1화 · 숫자·도형 모험</span></button>
+        <button class="number-location" id="goSpace"><img src="/lobby-art/place-space.webp" alt=""><span>우주 도형 놀이</span></button>
+        <button class="number-location" id="goPlay"><img src="/lobby-art/place-stickers.webp" alt=""><span>스티커 놀이</span></button>
+        <button class="number-location" id="goShelf"><img src="/lobby-art/place-gifts.webp" alt=""><span>선물 선반</span></button>
+      </div>
+      <button id="mLang" class="number-language"><img src="/lobby-art/settings.webp" alt=""><span>한국어</span></button>
+    </div>
+    <!-- reward / finale -->
+    <div id="reward" class="hidden">
+      <div class="rCard">
+        <div class="stars">⭐⭐⭐</div>
+        <h2 id="rTitle">참 잘했어요!</h2>
+        <div id="rStickers"></div>
+        <div class="share" id="shareCard"><img src="img/raijun.webp" alt=""><p id="shareTxt"></p></div>
+        <div class="rBtns">
+          <button class="big" id="bShare">📤 부모님께 자랑하기</button>
+          <button class="big alt" id="bAgain">↻ 처음부터</button>
+          <button class="big alt" id="bMenu">🏠 메뉴</button>
+        </div>
+        <p class="small" id="rNext"></p>
+      </div>
+    </div>
+  </div>
+  <!-- HUD (real pixels, always visible) -->
+  <div id="hud" class="hidden">
+    <div class="hl">
+      <button id="hExit" class="hb"><i>🏠</i><span>나가기</span></button>
+      <button id="hRestart" class="hb"><i>↻</i><span>다시하기</span></button>
+      <button id="hBook" class="hb"><i>📒</i><span>스티커</span><b id="bookN">0</b></button>
+    </div>
+    <div class="hr">
+      <button id="hReplay" class="hb"><i>🔊</i><span>다시 듣기</span></button>
+      <button id="hLang" class="hb sm"><i>KO</i><span>언어</span></button>
+      <button id="hSnd" class="hb sm"><i>🎵</i><span>소리</span></button>
+      <button id="hFull" class="hb sm"><i>⛶</i><span>전체</span></button>
+    </div>
+  </div>
+  <div id="modal" class="hidden"><div class="mBox"><p id="mQ"></p><div id="mBtns"></div></div></div>
+</div>
+<script>window.RJ_VER="2.9"</script>
+<script src="/shared.js"></script>
+<script src="lines.js?v=2.9"></script>
+<script src="core.js?v=2.9"></script>
+<script src="ep1.js?v=2.9"></script>
+<script src="space.js?v=2.9"></script>
+<script src="play.js?v=2.9"></script>
+<script src="main.js?v=2.9"></script>
+</body>
+</html>

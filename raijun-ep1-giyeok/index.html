@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>라이준 한글 1화 – ㄱ 친구들 (가·고·기)</title>
+<link rel="stylesheet" href="./style.css"><link rel="stylesheet" id="rjcss" href="./style-2.css"><link rel="stylesheet" id="rjnotice" href="./style-3.css"></head><body><div id="rjnotice" aria-hidden="true">© 라이준 · 준이토이 세종대왕 · 무단 복제 금지</div>
+<div id="rot"><div class="ic">📱</div><div data-t="폰을 가로로 돌려 주세요">폰을 가로로 돌려 주세요</div><button id="rotok" data-t="그냥 할래요">그냥 할래요</button></div>
+<div id="app"><div id="bg"></div><canvas id="stars"></canvas>
+<button id="gear" aria-label="settings"><svg viewBox="0 0 54 54"><circle cx="27" cy="27" r="25"/></svg>⚙</button>
+<nav id="nav"><button id="nvRetry" class="nb" aria-label="retry"><span class="ic">🔄</span><span data-t="다시하기">다시하기</span></button><button id="nvBack" class="nb" aria-label="back"><span class="ic">◀</span><span data-t="돌아가기">돌아가기</span></button><button id="nvExit" class="nb" aria-label="exit"><span class="ic">🏠</span><span data-t="나가기">나가기</span></button></nav><div id="retryToast" aria-live="polite">다시 쓸게요!</div>
+<div id="exitc"><div style="font-size:calc(var(--h)*14)">🐯</div><div data-t="그만할까요?">그만할까요?</div><div class="ch"><button class="btn s" id="exYes" data-t="응, 그만할래">응, 그만할래</button><button class="btn s" id="exNo" data-t="아니, 계속할래">아니, 계속할래</button></div></div>
+<div id="dexplay"><video id="dexvid" playsinline webkit-playsinline muted preload="auto"></video><div id="dexcap"></div><button class="btn s" id="dexpx" data-t="닫기">닫기</button><div id="dexcr"></div></div>
+<button class="btn s" id="dexbtn">📖 <span data-t="도감">도감</span></button>
+<section id="settings"><h2 data-t="부모님 설정">부모님 설정</h2>
+ <div class="row"><span data-t="따라쓰기 난이도">따라쓰기 난이도</span><div class="seg" data-k="tol"><button data-v="easy" data-t="쉬움">쉬움</button><button data-v="normal" data-t="보통">보통</button><button data-v="hard" data-t="어려움">어려움</button></div></div>
+ <div class="row"><span data-t="글자 크기">글자 크기</span><div class="seg" data-k="size"><button data-v="S">S</button><button data-v="M">M</button><button data-v="L">L</button></div></div>
+ <div class="row"><span data-t="쓰는 손">쓰는 손</span><div class="seg" data-k="hand"><button data-v="left" data-t="왼손">왼손</button><button data-v="right" data-t="오른손">오른손</button></div></div>
+ <div class="row"><span data-t="획순 안내">획순 안내</span><div class="seg" data-k="guide"><button data-v="on" data-t="보이기">보이기</button><button data-v="off" data-t="숨기기">숨기기</button></div></div>
+ <div class="row"><span data-t="손 떼고 이어 쓰기">손 떼고 이어 쓰기</span><div class="seg" data-k="lift"><button data-v="on" data-t="허용">허용</button><button data-v="off" data-t="안 함">안 함</button></div></div>
+ <div class="row"><span data-t="조용한 모드">조용한 모드</span><div class="seg" data-k="quiet"><button data-v="on" data-t="켜기">켜기</button><button data-v="off" data-t="끄기">끄기</button></div></div>
+ <div class="row"><span data-t="언어">언어</span><div class="seg" data-k="lang"><button data-v="ko">🇰🇷 한국어</button><button data-v="en">🇺🇸 English</button><button data-v="zh">🇨🇳 中文</button><button data-v="es">🇪🇸 Español</button><button data-v="fr">🇫🇷 Français</button></div></div>
+<section><h3 data-t="진행 기록">진행 기록</h3><div id="prog"></div><button class="btn s" id="progclr" data-t="기록 지우기">기록 지우기</button></section>
+ <section><h3 data-t="하루 사용 시간">하루 사용 시간</h3><div class="row"><div class="seg" data-k="limit"><button data-v="0" data-t="제한 없음">제한 없음</button><button data-v="10">10′</button><button data-v="15">15′</button><button data-v="20">20′</button><button data-v="30">30′</button></div></div><small id="usage"></small></section>
+ <section><h3 data-t="활동지">활동지</h3><a class="btn s" id="sheet" href="activity_sheet.pdf" download="라이준_1화_활동지_A4.pdf" data-t="활동지 출력">활동지 출력</a> <small data-t="A4 · ㄱ / 가 / 고 따라 쓰기 + 색칠">A4 · ㄱ / 가 / 고 따라 쓰기 + 색칠</small></section>
+ <section><h3 data-t="개인정보">개인정보</h3><small data-t="PRIV">계정이 없어요. 기록과 설정은 이 기기 브라우저(localStorage)에만 저장되고, 서버 전송·광고·추적기·외부 요청이 없어요. '기록 지우기'로 언제든 삭제할 수 있어요.</small></section>
+ <section><h3 data-t="만든 사람들 · 출처">만든 사람들 · 출처</h3><ul>
+  <li data-t="AI">일부 영상·음성은 AI 도구로 만들었어요. 한글 글자는 페이지가 직접 그린 벡터예요.</li>
+  <li><span data-t="가젤 사진">가젤 사진</span>: Bob, CC BY 3.0 — <a href="https://commons.wikimedia.org/wiki/File:Eudorcas_thomsonii_-Serengeti_National_Park,_Tanzania-8.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+  <li><span data-t="고릴라 사진">고릴라 사진</span>: k7hpn, CC BY 2.0 — <a href="https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla(Gorilla_gorilla_gorilla).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+  <li>기린 사진: Jason Graham, CC0 1.0 — <a href="https://commons.wikimedia.org/wiki/File:Giraffa_tippelskirchi_tippelskirchi_344231381.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li>
+  <li>도감 영상: 임팔라 brando CC BY 2.0 · 고릴라 LA Zoo CC BY 3.0 · 기린 Lennart Hessel CC BY 3.0 — Wikimedia Commons. 사진: Bob CC BY 3.0 · k7hpn CC BY 2.0 · Jason Graham CC0. 동물 소리는 코드로 합성했어요.</li>
+  <li><a href="credits.txt" target="_blank">credits.txt</a></li></ul></section>
+ <div class="row"><button class="btn s" id="setclose" data-t="닫기">닫기</button></div></section>
+<div id="gate"><div data-t="부모님 확인">부모님 확인</div><div id="gq"></div><div class="ch" id="gch"></div><button class="btn s" id="gx" data-t="닫기">닫기</button></div>
+<div id="rest"><div style="font-size:calc(var(--h)*16)">🦁💤</div><div data-t="라이준도 쉬러 갈 시간이야">라이준도 쉬러 갈 시간이야</div><div style="font-size:.6em;opacity:.8" data-t="내일 또 만나요!">내일 또 만나요!</div></div>
+<section class="screen" id="photo"><div class="wrap"><img id="pimg" alt=""><div class="side"><svg id="psvg" viewBox="-6 -6 112 112"></svg><div class="cap" id="pcap"></div><button class="btn s" id="pnext" data-t="계속 ▶">계속 ▶</button></div></div><div class="cr" id="pcr"></div></section>
+<section class="screen" id="dex"><h1 data-t="라이준 동물 도감">라이준 동물 도감</h1><div class="cards">
+ <div class="card" data-a="gazelle"><div class="ph" style="background-image:url(gazelle_poster.jpg)"></div><div data-t="가젤">가젤</div></div>
+ <div class="card" data-a="gorilla"><div class="ph" style="background-image:url(gorilla_poster.jpg)"></div><div data-t="고릴라">고릴라</div></div>
+ <div class="card" data-a="giraffe"><div class="ph" style="background-image:url(giraffe_poster.jpg)"></div><div data-t="기린">기린</div></div></div>
+ <button class="btn s" id="dexclose" data-t="돌아가기">돌아가기</button></section>
+<section class="screen on" id="start"><h1 data-t="라이준 한글 1화">라이준 한글 1화</h1><div style="font-size:calc(var(--h)*20);text-shadow:0 0 30px #ffd86b">ㄱ 친구들</div><div class="seg flags" data-k="lang"><button data-v="ko">🇰🇷</button><button data-v="en">🇺🇸</button><button data-v="zh">🇨🇳</button><button data-v="es">🇪🇸</button><button data-v="fr">🇫🇷</button></div><button class="btn" id="go" data-t="시작">시작</button><div style="font-size:calc(var(--h)*4.6);opacity:.9" data-t="소리를 켜 주세요 🔊">소리를 켜 주세요 🔊</div></section>
+<section class="screen" id="trace">
+ <div id="pad"><svg viewBox="0 0 100 100" id="svg">
+  <defs><radialGradient id="bd" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#f2f6ff"/><stop offset=".55" stop-color="#b7c3d9"/><stop offset=".85" stop-color="#6a7891"/><stop offset="1" stop-color="#3b465c"/></radialGradient><filter id="gl" filterUnits="userSpaceOnUse" x="-30" y="-30" width="160" height="160"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g id="word"></g><g id="guides"></g>
+  <circle id="dot" r="3.2" fill="#fff" filter="url(#gl)" opacity="0"/>
+ </svg><canvas id="cv"></canvas></div>
+ <div id="side"><div id="stage"></div><div id="msg">손가락으로 따라 써 봐!</div><div id="formula"></div></div>
+<div id="rj" aria-hidden="true"><div id="rjb"><div id="rja"><img src="raijun_trace.webp" alt="" draggable="false"><div id="rjorb"></div></div></div></div></section>
+<section class="screen" id="vscreen">
+ <video id="vid" playsinline webkit-playsinline preload="auto"></video><div id="tap">▶ 눌러서 보기</div>
+ <div id="after"><button class="btn s" id="next" data-t="다음 글자 ▶">다음 글자 ▶</button><button class="btn s" id="again" data-t="한 번 더 써 볼까?">한 번 더 써 볼까?</button><button class="btn s" id="replay" data-t="한 번 더 보기">한 번 더 보기</button></div></section>
+<section class="screen" id="final"><h1>1화 완성! ㄱ 친구들 최고!</h1><div class="badges"><svg class="badge" viewBox="-5 -5 110 110" id="b0"></svg><svg class="badge" viewBox="-5 -5 110 110" id="b1"></svg><svg class="badge" viewBox="-5 -5 110 110" id="b2"></svg></div>
+ <div style="display:flex;gap:calc(var(--h)*3)"><button class="btn s" id="restart" data-t="처음부터 다시">처음부터 다시</button><button class="btn s" id="redo2" data-t="기 다시 쓰기">기 다시 쓰기</button></div></section>
+</div><canvas id="fx"></canvas>
+<script src="./game.js"></script></body></html>

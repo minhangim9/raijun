@@ -1,0 +1,21 @@
+/* RAIJUN-TRACE 2026-10-16 */
+#rj{position:fixed;z-index:5;pointer-events:none;opacity:0;transition:opacity .4s}
+#rj.ready{opacity:1}
+#rjb{width:100%;height:100%;animation:rjbob 2.6s ease-in-out infinite}
+#rja{position:relative;width:100%;height:100%;transform-origin:50% 100%}
+#rja img{width:100%;height:100%;display:block;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35))}
+#rjorb{position:absolute;left:15%;top:76%;width:9%;aspect-ratio:1;margin:-4.5% 0 0 -4.5%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fffbe0,#ffd84a 45%,#e8a400 80%);
+ box-shadow:0 0 0 2px rgba(255,216,74,.55),0 0 0 5px rgba(255,216,74,.28),0 0 0 8px rgba(255,216,74,.13),0 0 10px 3px rgba(255,210,60,.7);animation:rjorb 1.6s ease-in-out infinite}
+#rjorb.go{animation:rjorbgo .7s ease-out 2}
+.rjspark{position:fixed;z-index:6;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;pointer-events:none;background:#ffe27a;box-shadow:0 0 8px 3px rgba(255,214,70,.8);transition:left .8s cubic-bezier(.3,.6,.4,1),top .8s cubic-bezier(.3,.6,.4,1),opacity .8s,transform .8s}
+.rjstar{position:fixed;z-index:6;pointer-events:none;font-size:18px;animation:rjstar 1.1s ease-out forwards}
+#rja.hop{animation:rjhop .45s ease-out}
+#rja.cheer{animation:rjcheer 1.5s ease-in-out}
+#rja.tilt{animation:rjtilt 1.3s ease-in-out}
+@keyframes rjbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes rjorb{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.18);filter:brightness(1.25)}}
+@keyframes rjorbgo{0%{transform:scale(1)}40%{transform:scale(1.45);filter:brightness(1.5)}100%{transform:scale(1)}}
+@keyframes rjhop{0%,100%{transform:translateY(0)}40%{transform:translateY(-12%)}70%{transform:translateY(0) scaleY(.96)}}
+@keyframes rjcheer{0%,100%{transform:translateY(0) rotate(0)}15%{transform:translateY(-14%) rotate(-5deg)}30%{transform:translateY(0) rotate(0)}45%{transform:translateY(-14%) rotate(5deg)}60%{transform:translateY(0)}75%{transform:translateY(-8%) scale(1.04)}}
+@keyframes rjtilt{0%,100%{transform:rotate(0)}25%,70%{transform:rotate(-8deg)}}
+@keyframes rjstar{0%{transform:translate(0,0) scale(.4);opacity:0}25%{opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.1);opacity:0}}

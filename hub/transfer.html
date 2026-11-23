@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>라이준 기록 이전</title>
+<script>
+  const hub = 'http://127.0.0.1:8080';
+  addEventListener('message', event => {
+    if (event.origin !== hub || event.source !== parent || event.data?.type !== 'raijun:request-legacy-save') return;
+    try {
+      parent.postMessage({
+        type: 'raijun:legacy-save',
+        inventory: localStorage.getItem('raijun_inventory'),
+        settings: localStorage.getItem('rj2_set'),
+      }, hub);
+    } catch {
+      parent.postMessage({type: 'raijun:legacy-save', unavailable: true}, hub);
+    }
+  });
+</script>
+</html>

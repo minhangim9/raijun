@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#091a2a">
+  <title>라이준 모험 지도</title>
+  <link rel="preload" as="image" href="/lobby-art/map-world.webp">
+  <link rel="stylesheet" href="/home.css">
+  <script defer src="/shared.js"></script>
+  <script defer src="/hangul-cards.js"></script>
+  <script defer src="/home.js"></script>
+</head>
+<body>
+  <main class="stage" data-map="world" aria-labelledby="map-title">
+    <h1 id="map-title" tabindex="-1">라이준 모험 지도</h1>
+    <div id="world-map" class="map" aria-label="모험 거점">
+      <a class="location portal" href="#hangul-map"><img src="/lobby-art/portal-hangul.webp" alt=""><span>한글 탐험</span></a>
+      <a class="location portal" href="#numbers-map"><img src="/lobby-art/portal-numbers.webp" alt=""><span>숫자·도형 모험</span></a>
+      <img class="mascot mascot-left" src="/numbers/img/raijun.webp" alt="">
+      <img class="mascot mascot-right" src="/numbers/img/raa.webp" alt="">
+    </div>
+    <div id="hangul-activities" class="map" aria-label="한글 탐험 장소" hidden></div>
+    <div id="numbers-activities" class="map" aria-label="숫자·도형 모험 장소" hidden></div>
+    <a class="command map-back" id="map-back" href="#" hidden><img src="/lobby-art/back.webp" alt=""><span>큰 지도</span></a>
+    <button type="button" class="command map-collection" id="collection-open"><img src="/lobby-art/collection.webp" alt=""><span>도감책</span></button>
+    <button type="button" class="command map-settings" id="settings-open"><img src="/lobby-art/settings.webp" alt=""><span>설정</span></button>
+  </main>
+  <section class="rotate" aria-label="화면 방향 안내">
+    <img src="/lobby-art/rotate.webp" alt="">
+    <p>가로로 돌려서 모험을 시작해요</p>
+  </section>
+  <dialog id="collection" class="panel" aria-labelledby="collection-title">
+    <form method="dialog" class="panel-heading">
+      <h2 id="collection-title">모험 도감책</h2>
+      <button class="command" type="submit"><img src="/lobby-art/close.webp" alt=""><span>닫기</span></button>
+    </form>
+    <div class="albums">
+      <section class="album hangul">
+        <h3>한글 탐험</h3>
+        <div id="hangul-progress" class="progress"></div>
+        <p id="hangul-balances" class="balances"></p>
+        <h4 id="card-title">도감 카드</h4>
+        <div id="cards" class="collection-grid cards"></div>
+      </section>
+      <section class="album numbers">
+        <h3>숫자·도형 모험</h3>
+        <div id="numbers-progress" class="progress"></div>
+        <h4 id="sticker-title">스티커</h4>
+        <div id="stickers" class="collection-grid"></div>
+        <h4 id="gift-title">선물·탈것</h4>
+        <div id="gifts" class="collection-grid"></div>
+      </section>
+    </div>
+  </dialog>
+  <dialog id="settings" class="panel settings" aria-labelledby="settings-title">
+    <form method="dialog" class="panel-heading">
+      <h2 id="settings-title">게임 설정</h2>
+      <button class="command" type="submit"><img src="/lobby-art/close.webp" alt=""><span>닫기</span></button>
+    </form>
+    <div class="setting-buttons">
+      <button type="button" class="command" id="sound" aria-pressed="true"><img alt=""><span>소리</span></button>
+      <button type="button" class="command" id="vibration" aria-pressed="true"><img alt=""><span>진동</span></button>
+      <button type="button" class="command" id="import"><img src="/lobby-art/import.webp" alt=""><span>8081 기존 기록 가져오기</span></button>
+    </div>
+    <p id="import-message" role="status"></p>
+  </dialog>
+</body>
+</html>
